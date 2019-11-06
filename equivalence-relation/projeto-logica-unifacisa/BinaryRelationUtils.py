@@ -63,3 +63,32 @@ class BinaryRelationUtils(object):
         antisymmetric or False if it is not.
         """
         pass
+
+    @staticmethod
+    def verify_equivalency(binary_relation, input_set):
+        """
+        This method verifies if a given binary relation is an equivalence relation.
+
+        Arguments:
+        binary_relation - A subclass of the BinaryRelation class.
+
+        input_set - A set closed under the binary relation.
+
+        Return True if the binary relation in the given input set is 
+        an equivalence relation or False if it is not.
+        """
+        pass
+
+    @staticmethod
+    def get_partitioning(binary_relation, input_set):
+        """
+        This method first verifies if binary relation is an equivalence relation and, if it is, generates a partitioning of the input set using the binary relation. If the binary relation is not an equivalence relation, it returns None.
+
+        Arguments:
+        binary_relation - A subclass of the BinaryRelation class.
+
+        input_set - A set closed under the binary relation.
+
+        Return None if the binary relation is not an equivalence relation or a partitioning of the input set (e.g.: {{1, 3, 5, ...}, {2, 4, 6, ...}}) if it is an equivalence relation.
+        """
+        pass
