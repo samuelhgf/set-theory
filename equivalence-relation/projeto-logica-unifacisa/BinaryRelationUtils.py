@@ -17,6 +17,7 @@ class BinaryRelationUtils(object):
         Return True if the binary relation in the given input set is reflexive
         or False if it is not.
         """
+        # TODO: Replace line below with actual code.
         pass
 
     @staticmethod
@@ -32,6 +33,7 @@ class BinaryRelationUtils(object):
         Return True if the binary relation in the given input set is symmetric
         or False if it is not.
         """
+        # TODO: Replace line below with actual code.
         pass
 
     @staticmethod
@@ -47,6 +49,7 @@ class BinaryRelationUtils(object):
         Return True if the binary relation in the given input set is transitive
         or False if it is not.
         """
+        # TODO: Replace line below with actual code.
         pass
 
     @staticmethod
@@ -62,6 +65,7 @@ class BinaryRelationUtils(object):
         Return True if the binary relation in the given input set is 
         antisymmetric or False if it is not.
         """
+        # TODO: Replace line below with actual code.
         pass
 
     @staticmethod
@@ -77,6 +81,7 @@ class BinaryRelationUtils(object):
         Return True if the binary relation in the given input set is 
         an equivalence relation or False if it is not.
         """
+        # TODO: Replace line below with actual code.
         pass
 
     @staticmethod
@@ -91,4 +96,5 @@ class BinaryRelationUtils(object):
 
         Return None if the binary relation is not an equivalence relation or a partitioning of the input set (e.g.: {{1, 3, 5, ...}, {2, 4, 6, ...}}) if it is an equivalence relation.
         """
-        pass
+        # TODO: Replace line below with actual code.
+        return {}
