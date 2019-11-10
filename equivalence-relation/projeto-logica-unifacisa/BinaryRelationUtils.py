@@ -89,12 +89,14 @@ class BinaryRelationUtils(object):
         """
         This method first verifies if binary relation is an equivalence relation and, if it is, generates a partitioning of the input set using the binary relation. If the binary relation is not an equivalence relation, it returns None.
 
+        Note: The partitioning of the set should be a list of subsets.
+
         Arguments:
         binary_relation - A subclass of the BinaryRelation class.
 
         input_set - A set closed under the binary relation.
 
-        Return None if the binary relation is not an equivalence relation or a partitioning of the input set (e.g.: {{1, 3, 5, ...}, {2, 4, 6, ...}}) if it is an equivalence relation.
+        Return None if the binary relation is not an equivalence relation or a partitioning of the input set (e.g.: [{1, 3, 5, ...}, {2, 4, 6, ...}]) if it is an equivalence relation.
         """
         # TODO: Replace line below with actual code.
-        return {}
+        return []

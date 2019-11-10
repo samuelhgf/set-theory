@@ -9,9 +9,9 @@ from GreaterThanBinaryRelation import GreaterThanBinaryRelation
 class BinaryRelationTest(unittest.TestCase):
 
     def setUp(self):
-        self.integers_set = set(range(300))
-        self.names_set = {"Alice", "Andre", "Bob", "Bruno",
-                          "Charles", "Carlos", "Camila", "Rodolfo", "Zeus"}
+        self.integers_set = set(range(100))
+        self.names_set = {"Ananias", "Alice", "Allef", "Anderson", "Andre", "Barbara", "Bernardo", "Bob", "Bruno",
+                          "Charles", "Carlos", "Camila", "Renata", "Rodolfo", "Zeus"}
         self.utils = BinaryRelationUtils()
         self.parity_relation = SameParityBinaryRelation()
         self.first_letter_relation = SameFirstLetterBinaryRelation()
@@ -71,12 +71,18 @@ class BinaryRelationTest(unittest.TestCase):
             self.greater_than_relation.contains_ordered_pair(100, 500))
 
     def testPartitioning(self):
-        self.assertSetEqual(len(self.utils.get_partitioning(
+        self.assertEqual(len(self.utils.get_partitioning(
             self.parity_relation, self.integers_set)), 2)
-        self.assertSetEqual(len(self.utils.get_partitioning(
+        self.assertEqual(len(self.utils.get_partitioning(
             self.first_letter_relation, self.names_set)), 5)
-        self.assertSetEqual(self.utils.get_partitioning(self.first_letter_relation, self.names_set), {{"Alice", "Andre"}, {"Bob", "Bruno"},
-                                                                                                      {"Charles", "Carlos", "Camila"}, {"Rodolfo"}, {"Zeus"}})
+        expected_names_partitioning = [{"Ananias", "Alice", "Allef", "Anderson", "Andre"}, {"Barbara", "Bernardo", "Bob", "Bruno"},
+                                       {"Charles", "Carlos", "Camila"}, {"Renata", "Rodolfo"}, {"Zeus"}]
+        actual_partitioning = self.utils.get_partitioning(
+            self.first_letter_relation, self.names_set)
+        for s1 in expected_names_partitioning:
+            for s2 in actual_partitioning:
+                if len(s1) == len(s2):
+                    self.assertSetEqual(s1, s2)
 
 
 if __name__ == "__main__":
