@@ -7,15 +7,7 @@ class GreaterThanBinaryRelation(BinaryRelation):
     """A Binary Relation which elements in an ordered pair share the same first letter."""
 
     def contains_ordered_pair(self, x, y):
-        """
-        This method returns a boolean value indicating if the first element of a given ordered pair is greater than the second one.
-
-        Arguments:
-        x - The first element of the ordered pair.
-        y - The second element of the ordered pair.
-
-        Return True if the first element of the ordered pair is greater than the second element, otherwise, return False.
-        """
+        return x > y
         pass
 
     def relation(self, S):
@@ -27,4 +19,6 @@ class GreaterThanBinaryRelation(BinaryRelation):
 
         Return a set of pairs in SxS (a.k.a. S²) that belong to the binary relation.
         """
+
+        return set([(x, y) for x in S for y in S if self.contains_ordered_pair(x, y)])
         pass
